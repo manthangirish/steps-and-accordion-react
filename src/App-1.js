@@ -1,5 +1,7 @@
 import { useState } from "react";
+import Accordion from "./Accordion";
 import "./index-1.css";
+
 const messages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
@@ -29,25 +31,44 @@ export default function App() {
             <div className={step >= 2 && "active"}>2</div>
             <div className={step >= 3 && "active"}>3</div>
           </div>
-          <p className="message">
-            Step {step}: {messages[step - 1]}
-          </p>
+          <Message step={step}>{messages[step - 1]}</Message>
           <div className="buttons">
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+            <Button
+              text="Previous"
               onClick={handlePrevious}
-            >
-              Previous
-            </button>
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+              textColor="#fff"
+              bgColor="#7950f2"
+            />
+            <Button
+              text="Next"
               onClick={handleNext}
-            >
-              Next
-            </button>
+              textColor="#fff"
+              bgColor="#7950f2"
+            />
           </div>
         </div>
       )}
+      <Accordion />
     </>
+  );
+}
+
+ function Button({ text, onClick, textColor, bgColor }) {
+  return (
+    <button
+      style={{ backgroundColor: bgColor, color: textColor }}
+      onClick={onClick}
+    >
+      {text}
+    </button>
+  );
+}
+
+function Message({ step, children }) {
+  return (
+    <div className="message">
+      <h3>STEP {step}</h3>
+      <p>{children}</p>
+    </div>
   );
 }
