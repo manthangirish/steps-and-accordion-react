@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/steps-and-accordion-react/static/css/main.a55f242e.css",
+    "main.js": "/steps-and-accordion-react/static/js/main.10775348.js",
+    "index.html": "/steps-and-accordion-react/index.html",
+    "main.a55f242e.css.map": "/steps-and-accordion-react/static/css/main.a55f242e.css.map",
+    "main.10775348.js.map": "/steps-and-accordion-react/static/js/main.10775348.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a55f242e.css",
+    "static/js/main.10775348.js"
+  ]
+}
